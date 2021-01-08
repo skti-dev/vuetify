@@ -8,13 +8,13 @@
         <h2>Add a new Project</h2>
       </v-card-title>
       <v-card-text>
-        <v-form class="px-3">
-          <v-text-field prepend-icon="mdi-folder" label="Title" v-model="title"></v-text-field>
-          <v-textarea prepend-icon="mdi-pencil" label="Informations about the project" v-model="content"></v-textarea>
+        <v-form class="px-3" ref="form">
+          <v-text-field prepend-icon="mdi-folder" :rules="inputRules" label="Title" v-model="title"></v-text-field>
+          <v-textarea prepend-icon="mdi-pencil" label="Informations about the project" v-model="content" :rules="inputRules"></v-textarea>
 
           <v-menu>
             <template v-slot:activator="{ on, attrs }">
-              <v-text-field :value="formattedDate" label="Due date" prepend-icon="mdi-calendar" v-bind="attrs" v-on="on"></v-text-field>
+              <v-text-field :rules="inputRules" :value="formattedDate" label="Due date" prepend-icon="mdi-calendar" v-bind="attrs" v-on="on" readonly></v-text-field>
             </template>
             <v-date-picker v-model="due"></v-date-picker>
           </v-menu>
@@ -35,12 +35,17 @@ export default {
     return {
       title: "",
       content: "",
-      due: null
+      due: null,
+      inputRules: [
+        value => value.length >= 2 || "Minimum length is 2 characters"
+      ]
     }
   },
   methods: {
     submit() {
-      console.log(this.title, this.content)
+      if(this.$refs.form.validate()){
+        console.log("Valido: ", this.title, this.content, this.due)
+      }
     }
   },
   computed: {
