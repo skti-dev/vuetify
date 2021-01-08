@@ -37,6 +37,9 @@
           </v-avatar>
           <p class="white--text subheading mt-1">The Net Ninja</p>
         </v-flex>
+        <v-flex class="my-3">
+          <Popup />
+        </v-flex>
       </v-layout>
       <v-list>
         <v-list-item v-for="(link, index) in links" :key="index" router :to="link.route">
@@ -52,9 +55,10 @@
 
   </nav>
 </template>
-
 <script>
+import Popup from "./Popup"
 export default {
+  components: { Popup },
   data(){
     return{
       drawer: false,
