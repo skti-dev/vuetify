@@ -1,5 +1,7 @@
 # simple-dashboard
 
+Realização de projeto simples para conhecer a biblioteca vuetify.
+
 ## Project setup
 ```
 npm install
