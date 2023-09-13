@@ -1,28 +1,9 @@
 # simple-dashboard
 
-Realização de projeto simples para conhecer a biblioteca vuetify.
+![image](https://github.com/skti-dev/vuetify/assets/38216218/de121ebe-fbb6-4876-883e-93d0c1ad6732)
 
-## Project setup
-```
-npm install
-```
+![image](https://github.com/skti-dev/vuetify/assets/38216218/bcd7d25b-f6e6-40b0-862a-80944eaeada8)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+![image](https://github.com/skti-dev/vuetify/assets/38216218/7853d9fd-1f83-403f-89e7-25c10be4bfaf)
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-Augusto Seabra 
+![image](https://github.com/skti-dev/vuetify/assets/38216218/22d2a38e-5387-43c2-aa5d-a9e849244987)
